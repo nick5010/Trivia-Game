@@ -13,22 +13,42 @@
 </head>
 
 <body>
-    <div class="timer"></div>
-<div class="container">
-    <h3>How many teams are in the American National Football League?</h3>
-    <!-- 32 is correct -->
-    <input type="radio" name= "option" class="correct response1"> 32 
-    <input type="radio" name= "option" class="incorrect response1"> 44
-    <input type="radio" name= "option" class="incorrect response1"> 24
-    <input type="radio" name= "option" class="incorrect response1"> 28
+    <div class="container">
 
-    <br>
-    <br>
+        <div id="timer"></div>
 
-    <button type="button" class="btn btn-primary submit">Submit</button>
+        <!-- button to start -->
+        <!-- <button type="button" class="btn btn-success">Start</button> -->
 
-</div>
-    <script src="app.js"></script>
+        <div class="question">
+        <h3>How many teams are in the American National Football League?</h3>
+        <!-- 32 is correct -->
+        <input type="radio" name="question1" class="correct response1"> 32
+        <input type="radio" name="question1" class="incorrect response1"> 44
+        <input type="radio" name="question1" class="incorrect response1"> 24
+        <input type="radio" name="question1" class="incorrect response1"> 28
+            </div>  
+        <br>
+        <br>
+
+            <div class="question">
+        <h3>What is called when a player scores two goals in a game of soccer?</h3>
+        <input type="radio" name="question2" class="incorrect response2"> A Homerun 
+        <input type="radio" name="question2" class="incorrect response2"> A Turkey 
+        <input type="radio" name="question2" class="correct response2"> A Brace 
+        <input type="radio" name="question2" class="incorrect response2"> None of the Above
+        </div>
+        <br>
+        <br>
+
+        <button type="button" class="btn btn-primary submit">Submit</button>
+        <br>
+        <br>
+        <div id="score"></div>
+
+
+    </div>
+    <script type='text/javascript' src="app.js"></script>
 </body>
 
 </html>
