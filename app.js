@@ -1,6 +1,7 @@
 $(document).ready(function () {
-    var timer = 61;
-    var score = 0;
+    var timer = 60;
+    var correct = 0;
+    var incorrect= 0;
     var intervalId;
     var response = [];
     var response1;
@@ -14,11 +15,15 @@ $(document).ready(function () {
 
     function decrement() {
         timer--;
-        $("#timer").html("<h2>" + timer + "</h2>");
+        $("#timer").html(timer + " seconds");
 
         if (timer === 0) {
             stop();
             alert("Time Up!");
+            $('#timer').hide();
+        $('.question').hide();
+        $("#score").html("<h2> You got " + correct + " questions correct</h2>");
+        $("#incScore").html("<h2> You got " + incorrect + " questions incorrect</h2>");
         }
     }
 
@@ -26,29 +31,36 @@ $(document).ready(function () {
         clearInterval(intervalId);
     }
 
-    run()
+    $('.start').click(function() {
+        run();
+        $('#cover').hide();
+    })
 
+    console.log(response);
 
     $('.response1').click(function () {
-        response1 = this.className;
+        response1 = this.value;
     })
 
     $('.response2').click(function () {
-        response1 = this.className;
+        response2 = this.value;
     })
 
     $('.submit').click(function () {
-        response.push(response1, response2, response3)
-        for (i = 0; i > response.length; i++) {
+        response.push(response1, response2)
+        for (i = 0; i < response.length; i++) {
             if (response[i] === 'correct') {
-                score++;
-
+                correct++;
+                console.log(response[i])
+            } else {
+                incorrect++;
             }
-
         }
+        stop();
         $('#timer').hide();
         $('.question').hide();
-        $("#score").html("<h2> You got " + score + " questions correct</h2>");
-
+        $("#score").html("<h2> You got " + correct + " questions correct</h2>");
+        $("#incScore").html("<h2> You got " + incorrect + " questions incorrect</h2>");
+        $('.submit').hide();
     })
 })

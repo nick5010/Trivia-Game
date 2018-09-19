@@ -1,0 +1,38 @@
+#cover {
+    position: fixed;
+    width: 100%; 
+    height: 100%; 
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 2; 
+    cursor: pointer;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    z-index: 5;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    height: 80%;
+}
+
+.start {
+    height: 50px;
+    width: 100px;
+}
+
+/* body {
+    background-image: url("http://flowersheet.com/wp-content/uploads/watch-live-all-sports-background-14627-intended-for-background-of-sport-768x576.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+} */

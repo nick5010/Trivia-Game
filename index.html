@@ -8,47 +8,56 @@
     <title>Trivia</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <h1 id='head'>Sports Trivia</h1>
+    <br>
+    <div id='cover'>
+        <h1 id='head'>Sports Trivia</h1>
+        <div class="container">
+            <button type="button" class="btn btn-success start">Start</button>
+        </div>
+    </div>
     <div class="container">
 
-        <div id="timer"></div>
+        <h2>Time Remaining: <span id="timer">60 seconds</span></h2>
 
-        <!-- button to start -->
-        <!-- <button type="button" class="btn btn-success">Start</button> -->
 
         <div class="question">
-        <h3>How many teams are in the American National Football League?</h3>
-        <!-- 32 is correct -->
-        <input type="radio" name="question1" class="correct response1"> 32
-        <input type="radio" name="question1" class="incorrect response1"> 44
-        <input type="radio" name="question1" class="incorrect response1"> 24
-        <input type="radio" name="question1" class="incorrect response1"> 28
-            </div>  
-        <br>
-        <br>
-
-            <div class="question">
-        <h3>What is called when a player scores two goals in a game of soccer?</h3>
-        <input type="radio" name="question2" class="incorrect response2"> A Homerun 
-        <input type="radio" name="question2" class="incorrect response2"> A Turkey 
-        <input type="radio" name="question2" class="correct response2"> A Brace 
-        <input type="radio" name="question2" class="incorrect response2"> None of the Above
+            <h3>How many teams are in the American National Football League?</h3>
+            <!-- 32 is correct -->
+            <input type="radio" name="question1" value='correct' class="response1"> 32
+            <input type="radio" name="question1" value='incorrect' class="response1"> 44
+            <input type="radio" name="question1" value='incorrect' class="response1"> 24
+            <input type="radio" name="question1" value='incorrect' class="response1"> 28
         </div>
         <br>
         <br>
 
+        <div class="question">
+            <h3>What is called when a player scores two goals in a game of soccer?</h3>
+            <input type="radio" name="question2" value='incorrect' class="response2"> A Homerun
+            <input type="radio" name="question2" value='incorrect' class="response2"> A Turkey
+            <input type="radio" name="question2" value='correct' class="response2"> A Brace
+            <input type="radio" name="question2" value='incorrect' class="response2"> None of the Above
+        </div>
+        <br>
+        <br>
         <button type="button" class="btn btn-primary submit">Submit</button>
         <br>
         <br>
         <div id="score"></div>
+        <br>
+        <div id="incScore"></div>
 
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script type='text/javascript' src="app.js"></script>
+
 </body>
 
 </html>
